@@ -1,0 +1,192 @@
+/* Warna utama tema gelap */
+:root {
+  --hitam: #1c1c1c;
+  --abu-gelap: #2a2a2a;
+  --abu-medium: #3a3a3a;
+  --biru-muda: #7ec8ff;
+  --oren-muda: #f9a880;
+  --putih: #f5f5f5;
+  --text: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--hitam);
+  color: var(--text);
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--abu-gelap), var(--abu-medium));
+  color: var(--putih);
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--biru-muda);
+  animation: fadeInDown 1.5s ease;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  color: var(--oren-muda);
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--abu-gelap);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: var(--oren-muda);
+  transform: scale(1.05);
+}
+
+/* Section umum */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--biru-muda);
+}
+
+/* About */
+.about {
+  text-align: center;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--oren-muda);
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--oren-muda);
+}
+
+/* Contact */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  background: var(--abu-gelap);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.contact-info {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--putih);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 2px solid var(--biru-muda);
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: none;
+  background: var(--abu-medium);
+  color: var(--putih);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 2px solid var(--oren-muda);
+  box-shadow: 0 0 10px var(--oren-muda);
+}
+
+.contact-form button {
+  padding: 1rem;
+  border: none;
+  background-color: var(--biru-muda);
+  color: var(--hitam);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 6px;
+}
+
+.contact-form button:hover {
+  background-color: var(--oren-muda);
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--abu-medium);
+  color: var(--putih);
+  margin-top: 2rem;
+  border-top: 2px solid var(--oren-muda);
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  nav { flex-direction: column; }
+}
